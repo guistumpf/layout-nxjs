@@ -30,13 +30,13 @@ export default function App() {
   return (
     <>
     <section>
-      <Link href="/contador2">Here!</Link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
       <h1>Contador</h1>
       <p style={{ color: cor }}>{numero}</p>
       <button onClick={menos}>menos</button>
       <button onClick={mais}>mais</button>
 </section>
-      <Link href={"/meowl"} className="meowl">Try this one!</Link>
+      <Link href={"/contador2"} className="meowl">Try this one!</Link>
 
 
     </>
