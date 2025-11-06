@@ -20,12 +20,15 @@ setinput("")
 
 }
 
-
+function excluir(){
+settarefas([])
+}
 
 
 return(
-  <>
  
+ 
+<div className='corpo'>
 
   <section className='Container'>
     <h1>Lista De Tarefas</h1>
@@ -34,6 +37,7 @@ return(
       console.log(e.target.value)
     }}></input>
     <button onClick={add}>Add</button>
+<button onClick={excluir}>Delete all</button>
     <ul>
     {tarefas.map((tarefas:any) => (
       <li key={tarefas}>
@@ -42,7 +46,8 @@ return(
     ))}
     </ul>
   </section>
-    </>
+    </div>
+
   
 )
 
