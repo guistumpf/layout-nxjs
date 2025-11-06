@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  min-height: 100vh;
+  display: grid;
+place-content: center;
+background-color: #121212;
+;
+}
+
+section{
+  background-color: rgb(230, 216, 216);
+padding: 15px;
+border-radius: 12px;
+text-align: center;
+}
+
+p{
+  font-size: 100px;
+
+}
+
+button{
+  margin: 3px;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+transition: transform 0.4s;
+cursor: pointer;
+}
+
+button:hover{
+  border-color: white;
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+}
+
+.meowl{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
