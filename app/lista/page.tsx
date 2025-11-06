@@ -39,7 +39,7 @@ return(
     <input value={input} onChange={(e) => {
       setinput(e.target.value)
       console.log(e.target.value)
-    }}></input>
+    }} placeholder='Digite Uma Tarefa!'></input>
     <button onClick={add}>Add</button>
     <ul>
     {tarefas.map((tarefas:any) => (

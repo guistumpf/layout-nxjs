@@ -20,7 +20,7 @@ text-align: center;
 
 input{
     font-size: 15px;
-
+border: 1px solid black;
 }
 
 ul{
@@ -41,6 +41,7 @@ li{
      font-size: 20px;
 margin: 0;
 list-style: decimal;
+color: black
 }
 
 

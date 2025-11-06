@@ -27,6 +27,9 @@ export default function App() {
   )
 
 
+
+
+
   return (
     <>
     <section>
@@ -35,8 +38,10 @@ export default function App() {
       <p style={{ color: cor }}>{numero}</p>
       <button onClick={menos}>menos</button>
       <button onClick={mais}>mais</button>
+
 </section>
-      <Link href={"/contador2"} className="meowl">Try this one!</Link>
+
+      <Link href={"/lista"} className="meowl">Try this one!</Link>
 
 
     </>
