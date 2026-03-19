@@ -17,6 +17,7 @@ export default function PPT() {
     const [cor, setcor] = useState("")
     const [jguser, setdisplay] = useState("")
     const [jgma, setdisplaym] = useState("")
+    const [aviso, setaviso] = useState("")
     const [bloqueado, setblock] = useState(false)
     const [vitorias, setvitorias] = useState(0)
     const [empates, setempates] = useState(0)
@@ -38,8 +39,7 @@ export default function PPT() {
     const [placar, setplacar] = useState("")
     //#endregion
 
-    // 1. CARREGAMENTO INICIAL (Idioma, Tema e Placar)
-    // O [] garante que isso rode APENAS UMA VEZ ao abrir a página
+    
     useEffect(() => {
         const idioma = localStorage.getItem("idioma")
         const salvoTema = localStorage.getItem("theme: ppt");
@@ -51,12 +51,12 @@ export default function PPT() {
             setdisplay1("You: "); setpais("US"); setsub("Machine: "); setwin("You Win!");
             setdraw("Draw"); setlost("You Lost!"); settitulo("Rock, Paper and Scissors");
             setvi("Wins: "); setem("Draws: "); setder("Losses: "); setplacar("Results");
-            settext("Make your move!"); setResultado("Make your move!");
+            settext("Make your move!"); setResultado("Make your move!"); setaviso('Are you sure you want to reset the score?') 
         } else {
             setpais("BR"); setsub("Máquina: "); setdisplay1("Você: "); setwin("Você venceu!");
             setdraw("Empate"); setlost("A máquina venceu!"); settitulo("Pedra, Papel e Tesoura");
             setvi("Vitórias: "); setem("Empates: "); setder("Derrotas: "); setplacar("Resultados");
-            settext("Faça sua jogada!"); setResultado("Faça sua jogada!");
+            settext("Faça sua jogada!"); setResultado("Faça sua jogada!"); setaviso('Tem certeza que deseja resetar o placar?');
         }
 
         if (salvoTema) setclaro(salvoTema === "light");
@@ -67,14 +67,14 @@ export default function PPT() {
         setCarregado(true);
     }, []);
 
-    // 2. CONTROLE DO TEMA (BODY CLASS)
+    
     useEffect(() => {
         if (!carregado) return;
         document.body.classList.toggle("light", claro);
         localStorage.setItem("theme: ppt", claro ? "light" : "dark");
     }, [claro, carregado]);
 
-    // 3. LÓGICA DO RESULTADO DO JOGO
+    
     useEffect(() => {
         if (!escuser || !esmaquina) return;
 
@@ -124,7 +124,7 @@ export default function PPT() {
         return () => clearTimeout(timer);
     }, [escuser, esmaquina, draw, lost, vitoria, display1, sub, text]);
 
-    // 4. FUNÇÕES DE AÇÃO
+   
     function jogar(escolhauser: any) {
         if (bloqueado) return
         setblock(true)
@@ -136,7 +136,7 @@ export default function PPT() {
     }
 
     function reset() {
-        if (confirm("Tem certeza que deseja resetar o placar?")) {
+        if (confirm(aviso)) {
             localStorage.removeItem("vitorias")
             localStorage.removeItem("derrotas")
             localStorage.removeItem("empates")
@@ -146,12 +146,11 @@ export default function PPT() {
         }
     }
 
-    // 5. VARIÁVEIS DE IMAGEM
+    
     const imagens = ['/light-mode-svgrepo-com (3).png', '/dark-mode-6682.png']
     const imagemAtual = claro ? imagens[1] : imagens[0];
 
   
-    if (!carregado) return <div className="pptbody" style={{background: "#1a1a1a", height: "100vh"}} />;
 
     return (
         <div className="pptbody">
