@@ -142,7 +142,7 @@ console.log(ingles)
   return (
     <>
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-      <link rel="icon" href="/e1497514ab168e36120bb64668dbc7af.ico" sizes="any" />
+      <link rel="icon" href="/new.ico" sizes="any" />
       <button className={`hamburguer ${menuaberto && 'aberto'}`} onClick={mudarmenu}>
         <span className="linha"></span>
         <span className="linha"></span>
