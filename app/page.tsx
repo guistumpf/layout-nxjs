@@ -60,7 +60,7 @@ conversor = "Conversor"
 }
 
 const texto1 = ingles 
-?"Hi! My name is João and i have been studying software development for some time and recently i had the idea to create this website to store my project and ideas."
+?"Hi! My name is João and i have been studying software development for some time and recently i had the idea to create this website to store my projects and ideas."
 :"Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas a algum tempo e recentemente eu tive a ideia de criar esse site para armazenar meus projetos e ideias."
 
 const text2 = ingles
@@ -68,7 +68,7 @@ const text2 = ingles
 :"Sinta-se livre para testar e acompanhar minha jornada conforme meus conhecimentos vão se expandindo na área!"
 
 const texto2meio = ingles
-?"Click on the bar in the upper left corner of the page and test my projects!"
+?"Click on the hamburguer menu in the upper left corner of the page and test my projects!"
 :"Clique na barrinha no canto superior esquerdo da página e teste meus projetos!"
 
 const redes = ingles
